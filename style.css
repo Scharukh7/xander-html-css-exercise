@@ -48,6 +48,55 @@ a:hover {
   text-decoration: none;
   color: var(--hotmag);
 }
+
+/* Navbar */
+
+
+nav {
+    font-family: var(--mono);
+  }
+  
+  .navlinks {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  .navlinks li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+  .navlinks li:first-child a {
+    font-family: var(--sans);
+    font-size: 1.75rem;
+  }
+  
+  .navlinks li a {
+    text-decoration: none;
+    transition: color 0.4s ease;
+    color: var(--white);
+    font-size: 1.15rem;
+  }
+  
+  .navlinks li a:hover {
+    color: var(--hotmag);
+  }
+  
+  @media screen and (min-width: 750px) {
+    .navlinks li:first-child {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
+    }
+  }
+
+
 /* Intro section */
 
 #intro {
@@ -90,4 +139,7 @@ a:hover {
   #contact article a {
     color: var(--aqua);
   }
+
+
+
   
