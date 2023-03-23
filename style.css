@@ -49,6 +49,19 @@ a:hover {
   color: var(--hotmag);
 }
 
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 23, 228, 1) 0%,
+    rgba(134, 251, 251, 1) 100%
+  );
+  height: 2px;
+}
+
+.section-dkblue {
+  background-color: var(--dkblue);
+}
+
 /* Navbar */
 
 nav {
@@ -146,6 +159,186 @@ nav [class*="fa"]:hover {
   display: block;
 }
 
+/* Projects Section */
+
+#projects {
+  padding: 4rem 1rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  /* Adding the line height onto our bottom margin. */
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+  color: var(--aqua);
+  margin-bottom: calc(1.5rem * 1.5);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
+}
+
+.black-box {
+  background-color: var(--black);
+  border-radius: 7px;
+  padding: 1rem;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+#projects ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+#projects img {
+  margin: 2rem 0 4rem 0;
+  padding: 0.2rem;
+  border-top: 1px solid var(--aqua);
+  border-left: 1px solid var(--aqua);
+  border-radius: 14px;
+  width: 70%;
+}
+
+/* Create the media query */
+@media screen and (min-width: 550px) {
+  /* Turn our article into a CSS grid */
+
+  #projects article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+
+  .text {
+    order: 2;
+    text-align: right;
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
+
+  .image {
+    grid-column: 1 / 7;
+  }
+
+  .text {
+    grid-column: 5 / 11;
+  }
+
+  .image,
+  .text {
+    grid-row: 1 / 2;
+  }
+}
+
+/* About section */
+
+#about {
+  padding: 4rem 1rem;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  /* Adding the line height onto our bottom margin. */
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#about h3 {
+  color: var(--aqua);
+  margin-bottom: calc(1.5rem * 1.5);
+}
+
+#about h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
+}
+
+.white-box {
+  background-color: var(--white);
+  border-radius: 7px;
+  padding: 1rem;
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+#about ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+#about img {
+  margin: 2rem 0 4rem 0;
+  padding: 0.2rem;
+  border-top: 1px solid var(--aqua);
+  border-left: 1px solid var(--aqua);
+  border-radius: 14px;
+  width: 70%;
+}
+
+/* Create the media query */
+@media screen and (min-width: 550px) {
+  /* Turn our article into a CSS grid */
+
+  #about article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+
+  .text {
+    order: 2;
+    text-align: right;
+  }
+
+  #about ul {
+    justify-content: flex-end;
+  }
+
+  .image {
+    grid-column: 1 / 7;
+  }
+
+  .text {
+    grid-column: 5 / 11;
+  }
+
+  .image,
+  .text {
+    grid-row: 1 / 2;
+  }
+
+  .reversed {
+    flex-direction: row-reverse;
+
+  }
+
+}
+
+/* End of About Section */
+
 /* contact section */
 
 #contact {
@@ -202,8 +395,3 @@ footer nav ul li a [class*="fa"] {
 footer nav ul li a [class*="fa"]:hover {
   color: var(--aqua);
 }
-
-
-
-
-  
